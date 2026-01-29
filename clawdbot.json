@@ -1,22 +1,44 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.1.24-3",
-    "lastTouchedAt": "2026-01-28T01:34:14.748Z"
+    "lastTouchedAt": "2026-01-29T04:42:53.384Z"
   },
   "wizard": {
-    "lastRunAt": "2026-01-28T01:07:27.617Z",
+    "lastRunAt": "2026-01-29T04:38:35.614Z",
     "lastRunVersion": "2026.1.24-3",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
+  "auth": {
+    "profiles": {
+      "anthropic:manual": {
+        "provider": "anthropic",
+        "mode": "token"
+      },
+      "google:default": {
+        "provider": "google",
+        "mode": "api_key"
+      }
+    }
+  },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "anthropic/claude-opus-4-5"
+        "primary": "google/gemini-3-flash-preview"
       },
       "models": {
-      	"anthropic/claude-opus-4-5": { alias: "opus" },
-        "openai/gpt-5-nano": { alias: "nano" }
+        "anthropic/claude-opus-4-5": {
+          "alias": "opus"
+        },
+        "openai/gpt-5-nano": {
+          "alias": "nano"
+        },
+        "google/gemini-3-flash-preview": {
+          "alias": "gemini-flash"
+        },
+        "google/gemini-3-pro-preview": {
+          "alias": "gemini-pro"
+        }
       },
       "workspace": "/root/clawd",
       "contextPruning": {
@@ -40,7 +62,8 @@
   },
   "commands": {
     "native": "auto",
-    "nativeSkills": "auto"
+    "nativeSkills": "auto",
+    "restart": true
   },
   "channels": {
     "telegram": {
@@ -68,14 +91,6 @@
     "entries": {
       "telegram": {
         "enabled": true
-      }
-    }
-  },
-  "auth": {
-    "profiles": {
-      "anthropic:manual": {
-        "provider": "anthropic",
-        "mode": "token"
       }
     }
   }
