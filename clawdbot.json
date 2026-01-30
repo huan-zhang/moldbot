@@ -1,12 +1,15 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.1.24-3",
-    "lastTouchedAt": "2026-01-29T04:42:53.384Z"
+    "lastTouchedAt": "2026-01-30T19:22:46.581Z"
+  },
+  "env": {
+    "BRAVE_API_KEY": "REDACTED"
   },
   "wizard": {
-    "lastRunAt": "2026-01-29T04:38:35.614Z",
+    "lastRunAt": "2026-01-29T23:36:46.523Z",
     "lastRunVersion": "2026.1.24-3",
-    "lastRunCommand": "onboard",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
   "auth": {
@@ -41,13 +44,6 @@
         }
       },
       "workspace": "/root/clawd",
-      "contextPruning": {
-        "mode": "cache-ttl",
-        "ttl": "1h"
-      },
-      "compaction": {
-        "mode": "safeguard"
-      },
       "heartbeat": {
         "every": "30m"
       },
@@ -58,7 +54,7 @@
     }
   },
   "messages": {
-    "ackReactionScope": "group-mentions"
+    "ackReactionScope": "all"
   },
   "commands": {
     "native": "auto",
@@ -69,9 +65,14 @@
     "telegram": {
       "enabled": true,
       "dmPolicy": "pairing",
-      "botToken": "7691080273:AAFKayKgz7nffY97wIars_KPAXIc5syXoWo",
+      "botToken": "REDACTED",
       "groupPolicy": "allowlist",
       "streamMode": "partial"
+    },
+    "discord": {
+      "enabled": true,
+      "token": "REDACTED",
+      "groupPolicy": "open"
     }
   },
   "gateway": {
@@ -80,7 +81,7 @@
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "ab52c7bb4e231f922f90b97dd36a431ac99e73338d8f749b"
+      "token": "REDACTED"
     },
     "tailscale": {
       "mode": "off",
@@ -90,6 +91,9 @@
   "plugins": {
     "entries": {
       "telegram": {
+        "enabled": true
+      },
+      "discord": {
         "enabled": true
       }
     }
